@@ -2,6 +2,8 @@
 
 React template repo for typescript + react
 
+Track this project on [Jira](https://linguaben.atlassian.net/jira/software/projects/TD/boards/4/backlog) 
+
 Features:
 
 - Eslint + Prettier with pre-commit lint hook
