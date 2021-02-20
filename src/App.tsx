@@ -1,6 +1,6 @@
 import React from 'react';
+import { Button, Container } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import Button from './components/Button';
 import { toggle } from './redux/stateSlice/StateSlice';
 import { RootState, useAppDispatch } from './redux/store';
 
@@ -12,11 +12,14 @@ const App = () => {
   const store = useSelector(selector);
 
   return (
-    <div className='App'>
-      <Button onClick={() => dispatch(toggle())} />
+    <Container className='App'>
+      <h1>Spellcard Teacher Portal</h1>
+      <Button onClick={() => dispatch(toggle())}>
+        Click <menu></menu>
+      </Button>
       <br />
       {store.toggle ? 'On' : 'Off'}
-    </div>
+    </Container>
   );
 };
 
