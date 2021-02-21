@@ -62,7 +62,11 @@
     }
   },
   "lint-staged": {
-    "**/*": [
+    "**/*.ts": [
+      "eslint --fix --max-warnings=0",
+      "prettier --write --ignore-unknown"
+    ],
+    "**/*.tsx": [
       "eslint --fix --max-warnings=0",
       "prettier --write --ignore-unknown"
     ]
