@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Container } from 'react-bootstrap';
+import { Alert, Button, Container } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
+import DevOnly from './components/DevOnly';
 import { toggle } from './redux/stateSlice/StateSlice';
 import { RootState, useAppDispatch } from './redux/store';
 
@@ -14,9 +15,11 @@ const App = () => {
   return (
     <Container className='App'>
       <h1>Spellcard Teacher Portal</h1>
-      <Button onClick={() => dispatch(toggle())}>
-        Click <menu></menu>
-      </Button>
+      <DevOnly>
+        <Alert variant={'info'}>You are in development mode</Alert>
+      </DevOnly>
+
+      <Button onClick={() => dispatch(toggle())}>Click</Button>
       <br />
       {store.toggle ? 'On' : 'Off'}
     </Container>
