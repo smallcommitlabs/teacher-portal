@@ -31,5 +31,5 @@ deploy:
     branches:
       only:
          - main
-    tags: false
+    tags: true
 
