@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - 'stable'
+cache:
+  directories:
+    - node_modules
+install:
+  - yarn
+script:
+  # Run backend tests
+  # - npm run test
+
+  # Build react app and copy to correct location
+  - yarn build
+
+after_success:
+  # Zip for publishing to github releases
+  - zip -r artifact * > /dev/null
+deploy:
+  provider: releases
+  api_key: '$accessKey'
+  file: 'artifact.zip'
+  skip_cleanup: true
+  on:
+    tags: false
+on:
+  branch: master

@@ -1,5 +1,4 @@
-import { createSlice, PayloadAction, SliceCaseReducers } from '@reduxjs/toolkit';
-import state from './state';
+import { createSlice } from '@reduxjs/toolkit';
 
 const stateSlice = createSlice({
   name: 'state',
