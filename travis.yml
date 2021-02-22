@@ -18,7 +18,7 @@ after_success:
   - zip -r artifact * > /dev/null
 deploy:
   provider: releases
-  api_key: 'dbb56dc6812df14c3c67e14f382bfed5002c5ac0'
+  api_key: '$accessKey'
   file: 'artifact.zip'
   skip_cleanup: true
   on:
