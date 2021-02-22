@@ -22,7 +22,6 @@ deploy:
   file: 'artifact.zip'
   skip_cleanup: true
   on:
-    repo: my-org/my-repo
     branches:
       only:
          - main
