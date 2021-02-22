@@ -28,4 +28,5 @@ deploy:
   file: 'artifact.zip'
   skip_cleanup: true
   on:
-    all_branches: true
+    branch:
+      all_branches: true
