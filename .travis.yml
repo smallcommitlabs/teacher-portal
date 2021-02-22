@@ -27,5 +27,3 @@ deploy:
   api_key: '$accessKey'
   file: 'artifact.zip'
   skip_cleanup: true
-  on:
-    tags: true
