@@ -11,7 +11,7 @@ script:
   # - npm run test
 
   # Build react app and copy to correct location
-  - yarn build:travis
+  - yarn build
 
 after_success:
   # Zip for publishing to github releases
