@@ -24,4 +24,4 @@ deploy:
   on:
     tags: false
 on:
-  branch: master
+  branch: main
