@@ -15,4 +15,5 @@ script:
 
 after_success:
   # Deploy build to octopus package library
-  - yarn ci:publish
+  - test $TRAVIS_BRANCH = "main" &&
+    yarn ci:publish
