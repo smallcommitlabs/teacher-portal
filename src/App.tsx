@@ -18,6 +18,8 @@ const App = () => {
       <br />
       {store.toggle ? 'On' : 'Off'}
       <p>This was deployed automatically!</p>
+      <br />
+      <p>this is some more text</p>
     </Container>
   );
 };
