@@ -1,6 +1,7 @@
-# Custom React Template
 
-React template repo for typescript + react
+
+# Teachers Portal
+[![Build Status](https://travis-ci.com/smallcommitlabs/teacher-portal.svg?branch=main)](https://travis-ci.com/smallcommitlabs/teacher-portal)
 
 Track this project on [Jira](https://linguaben.atlassian.net/jira/software/projects/TD/boards/4/backlog) 
 
