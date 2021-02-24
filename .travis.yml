@@ -14,19 +14,5 @@ script:
   - yarn build
 
 after_success:
-  # Zip for publishing to github releases
-  - zip -r artifact build/* > /dev/null
-before_deploy:
-  # Set up git user name and tag this commit
-  - git config --local user.name '$ghuser'
-  - git config --local user.email '$ghemail'
-  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-  - git tag $TRAVIS_TAG
-deploy:
-  provider: releases
-  api_key: '$accessKey'
-  file: 'artifact.zip'
-  skip_cleanup: true
-  on:
-    branch:
-      - main
+  # Deploy build to octopus package library
+  - yarn ci:publish
