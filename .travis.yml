@@ -7,10 +7,10 @@ cache:
 install:
   - yarn
 script:
-  # Run backend tests
-  # - npm run test
+  # Run tests
+  # - yarn test
 
-  # Build react app and copy to correct location
+  # Build react app
   - yarn build
 
 after_success:
