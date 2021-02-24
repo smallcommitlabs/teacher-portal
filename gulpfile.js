@@ -11,7 +11,7 @@ gulp.task('bump', () =>
 
 gulp.task('publish', () =>
   gulp
-    .src(['build/*'])
+    .src(['build/**'])
     .pipe(octo.pack('zip'))
     .pipe(octo.push({ apiKey: process.env.octopusKey, host: 'https://linguaben.octopus.app' }))
 );
