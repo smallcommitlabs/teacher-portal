@@ -29,8 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rm -rf node_modules && yarn",
-    "ci:publish": "node ./node_modules/gulp/bin/gulp.js publish",
-    "ci:bump": "node ./node_modules/gulp/bin/gulp.js bump"
+    "ci:publish": "node ./node_modules/gulp/bin/gulp.js publish"
   },
   "eslintConfig": {
     "extends": [
@@ -56,7 +55,6 @@
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prefer-arrow": "^1.2.2",
     "gulp": "^4.0.2",
-    "gulp-bump": "^3.2.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1"
