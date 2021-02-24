@@ -14,11 +14,10 @@ const App = () => {
   return (
     <Container className='App'>
       <h1>Spellcard Teacher Portal</h1>
-      <Button onClick={() => dispatch(toggle())}>
-        Click <menu></menu>
-      </Button>
+      <Button onClick={() => dispatch(toggle())}>Click</Button>
       <br />
       {store.toggle ? 'On' : 'Off'}
+      <p>This was deployed automatically!</p>
     </Container>
   );
 };
