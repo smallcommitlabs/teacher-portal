@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
-import { Spinner } from 'react-bootstrap';
 import { Redirect, Route, Switch } from 'react-router-dom';
+import Loading from '../pages/util/Loading';
 
 export interface routeMap {
   Fallback?: React.ComponentType;
@@ -20,11 +20,7 @@ interface redirect {
 }
 
 export const renderRoutes = ({
-  Fallback = () => (
-    <Spinner animation='border' role='status'>
-      <span className='sr-only'>Loading...</span>
-    </Spinner>
-  ),
+  Fallback = () => <Loading />,
   routes,
   redirects,
 }: routeMap) => () => (
