@@ -7,10 +7,7 @@ const MainLayout: React.FC = () => (
   <div className={'d-flex vh-100'}>
     <Sidebar />
     <div className={'flex-grow-1 overflow-auto'}>
-      <div
-        className={'d-flex flex-column justify-content-space-between'}
-        style={{ minHeight: '100%' }}
-      >
+      <div className={'d-flex flex-column justify-content-between'} style={{ minHeight: '100%' }}>
         <PublicRoutes />
         <Footer />
       </div>
