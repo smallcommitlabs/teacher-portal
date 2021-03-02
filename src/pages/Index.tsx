@@ -9,7 +9,7 @@ const Index: React.FC = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <Container>
+    <Container style={{ height: '3000px' }}>
       <h1>Welcome</h1>
       <DevOnly>
         <Alert variant={'info'}>
