@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
 import Loading from './pages/util/Loading';
 import { hydrateAuth } from './redux/authSlice/thunks/hydrateThunk';
 import { RootState, useAppDispatch } from './redux/store';
 import AuthRoutes from './routes/AuthRoutes';
-import PublicRoutes from './routes/PublicRoutes';
 
 const App = () => {
   const selectorFn = (store: RootState) => ({
@@ -25,7 +25,7 @@ const App = () => {
     return <Loading />;
   }
 
-  return <Router>{isAuthenticated ? <PublicRoutes /> : <AuthRoutes />}</Router>;
+  return <Router>{isAuthenticated ? <MainLayout /> : <AuthRoutes />}</Router>;
 };
 
 export default App;
